@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="root2" styleClass="vbox" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyController">
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="335.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="335.0">
+               <children>
+                  <VBox prefHeight="600.0" prefWidth="335.0">
+                     <children>
+                        <HBox prefHeight="46.0" prefWidth="330.0" style="-fx-background-color: #dcdcdc;">
+                           <children>
+                              <Text fx:id="textName" onMouseMoved="#fillName" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello, Welcome back..." wrappingWidth="243.04451751708984">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="1.0" top="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#gotoSettings" prefHeight="30.0" prefWidth="78.0" text="Settings">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="1.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="98.0" prefWidth="330.0" style="-fx-background-color: #b0c4de;">
+                           <children>
+                              <HBox prefHeight="27.0" prefWidth="337.0">
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="150.0" style="-fx-font-weight: normal;" text="View Transcactions By: ">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="66.0" prefWidth="330.0" style="-fx-background-color: #b0c4de;">
+                                 <children>
+                                    <Button fx:id="dayButton" mnemonicParsing="false" onAction="#dayBudgeting" text="Day">
+                                       <HBox.margin>
+                                          <Insets left="30.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="weekButton" mnemonicParsing="false" onAction="#weekBudgeting" text="Week">
+                                       <HBox.margin>
+                                          <Insets left="25.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="monthButton" mnemonicParsing="false" onAction="#monthBudgeting" text="Month">
+                                       <HBox.margin>
+                                          <Insets left="25.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="yearButton" mnemonicParsing="false" onAction="#yearBudgeting" style="-fx-background-color: lightblue;" text="Year">
+                                       <HBox.margin>
+                                          <Insets left="25.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="73.0" prefWidth="335.0" style="-fx-background-color: #b0c4de;">
+                           <children>
+                              <Label text="Monthly Money Left">
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="37.0" prefWidth="332.0">
+                                 <children>
+                                    <Text fx:id="textBudgetLeft" onMouseMoved="#fillBudget" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="201.54790687561035">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Button fx:id="manageButton" mnemonicParsing="false" onAction="#manageBudgeting" prefHeight="30.0" prefWidth="126.0" text="Change Budget">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="1.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="188.0" prefWidth="330.0">
+                           <children>
+                              <HBox prefHeight="74.0" prefWidth="335.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Label prefHeight="18.0" prefWidth="126.0" text="Accounts and Cards">
+                                       <HBox.margin>
+                                          <Insets top="18.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Button fx:id="breakDownButton" minHeight="18.0" mnemonicParsing="false" onAction="#seeTransactionBreakdown" prefHeight="32.0" prefWidth="161.0" text="Transaction BreakDown">
+                                       <HBox.margin>
+                                          <Insets left="25.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="167.0" prefWidth="330.0">
+                                 <children>
+                                    <ScrollPane prefHeight="110.0" prefWidth="331.0">
+                                       <content>
+                                          <Button fx:id="cardButton" mnemonicParsing="false" onAction="#viewCardInfo" prefHeight="122.0" prefWidth="227.0" style="-fx-background-image: url('C:\Users\spicy\OneDrive\Documents\Computer Science Projects\CS 440\440-Group-4-Fall-2023\Code\FiscallyFit\src\main\resources\Images');">
+                                             <graphic>
+                                                <ImageView fitHeight="121.0" fitWidth="245.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Images/creditcard1.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </content>
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                    </ScrollPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Transactions:">
+                           <VBox.margin>
+                              <Insets left="10.0" top="20.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Text fx:id="textTransactionOne" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="331.3984375" />
+                        <Text fx:id="textTransactionTwo" layoutX="10.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="329.3984375" />
+                        <Text fx:id="textTransactionThree" layoutX="10.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="330.3984375" />
+                        <Text fx:id="textTransactionFour" layoutX="10.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="329.3984375" />
+                        <Text fx:id="textTransactionFive" layoutX="10.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="330.3984375" />
+                        <Text fx:id="textTransactionSix" layoutX="10.0" layoutY="532.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="329.3984375" />
+                        <Text fx:id="textTransactionSeven" layoutX="10.0" layoutY="549.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="330.3984375" />
+                        <Text fx:id="textTransactionEight" layoutX="10.0" layoutY="583.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="330.3984375" />
+                        <Text fx:id="textTransactionNine" layoutX="10.0" layoutY="595.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="330.3984375" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+
+            </BorderPane>

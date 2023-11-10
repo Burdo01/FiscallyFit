@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import java.lang.String?>
+<BorderPane fx:id="root4" maxHeight="600.0" maxWidth="335.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TransactionsController">
+    <top>
+        <VBox alignment="CENTER" spacing="10" BorderPane.alignment="CENTER">
+            <children>
+                <!-- Home Button -->
+                <Button mnemonicParsing="false" onAction="#HomeButton" prefHeight="30.0" prefWidth="205.0" text=" Return Home" VBox.vgrow="NEVER">
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin>
+                </Button>
+                <!-- TRANSACTION SUMMARY Title -->
+                <Text text="TRANSACTION SUMMARY">
+                    <font>
+                        <Font name="Serif" size="24.0" />
+                    </font>
+                </Text>
+                <!-- HBox for Time Period and Dropdowns -->
+                <HBox alignment="CENTER" spacing="20">
+                    <children>
+                        <!-- ComboBox for selecting a week -->
+                        <ComboBox fx:id="weekComboBox" prefWidth="150.0">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="1 - Week 1" />
+                                    <String fx:value="2 - Week 2" />
+                                    <String fx:value="3 - Week 3" />
+                                    <String fx:value="4 - Week 4" />
+                                    <String fx:value="5 - Overall" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+
+                        <!-- ComboBox for selecting a month -->
+                        <ComboBox fx:id="monthComboBox" prefWidth="150.0">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="1 - January" />
+                                    <String fx:value="2 - February" />
+                                    <String fx:value="3 - March" />
+                                    <String fx:value="4 - April" />
+                                    <String fx:value="5 - May" />
+                                    <String fx:value="6 - June" />
+                                    <String fx:value="7 - July" />
+                                    <String fx:value="8 - August" />
+                                    <String fx:value="9 - September" />
+                                    <String fx:value="10 - October" />
+                                    <String fx:value="11 - November" />
+                                    <String fx:value="12 - December" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+
+                        <!-- ComboBox for selecting a year -->
+                        <ComboBox fx:id="yearComboBox" prefWidth="150.0">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="2015" />
+                                    <String fx:value="2016" />
+                                    <String fx:value="2017" />
+                                    <String fx:value="2018" />
+                                    <String fx:value="2019" />
+                                    <String fx:value="2020" />
+                                    <String fx:value="2021" />
+                                    <String fx:value="2022" />
+                                    <String fx:value="2023" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                    </children>
+                </HBox>
+            </children>
+            <VBox.margin>
+                <Insets top="20.0" bottom="20.0" />
+            </VBox.margin>
+        </VBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="20" BorderPane.alignment="CENTER" style="-fx-background-color: #ADD8E6;">
+            <children>
+                <!-- Button and label for food -->
+                <HBox alignment="CENTER" spacing="10">
+                    <children>
+                        <Button text="Food" mnemonicParsing="false" />
+                        <Label text="200 on Food">
+                            <font>
+                                <Font size="14" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <!-- Button and label for entertainment -->
+                <HBox alignment="CENTER" spacing="10">
+                    <children>
+                        <Button text="Entertainment" mnemonicParsing="false" />
+                        <Label text="150 on Entertainment">
+                            <font>
+                                <Font size="14" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <!-- Button and label for utilities -->
+                <HBox alignment="CENTER" spacing="10">
+                    <children>
+                        <Button text="Utilities" mnemonicParsing="false" />
+                        <Label text="300 on Utilities">
+                            <font>
+                                <Font size="14" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <!-- Button and label for other expenses -->
+                <HBox alignment="CENTER" spacing="10">
+                    <children>
+                        <Button text="Other" mnemonicParsing="false" />
+                        <Label text="100 on Other">
+                            <font>
+                                <Font size="14" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </center>
+</BorderPane>
