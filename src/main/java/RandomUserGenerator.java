@@ -34,7 +34,7 @@ class RandomUserGenerator {
     
     public static String generateName() {
     	
-    	String Name = name;
+    	//String Name = name;
     	
     	if(setName != 1) {
     		
@@ -62,10 +62,10 @@ class RandomUserGenerator {
     		setName = 1;
     		
     		
-    		return "Hello, Welcome back " + Name + "!";
+    		return "Hello, Welcome back " + name + "!";
     	}
     	else {
-    		return "Hello, Welcome back " + Name + "!";
+    		return "Hello, Welcome back " + name + "!";
     	}
     }
     

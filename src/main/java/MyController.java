@@ -201,6 +201,12 @@ public class MyController implements Initializable {
         monthButton.setStyle("");
         weekButton.setStyle("");
         yearButton.setStyle("");
+        
+        // updating money left in budget
+//        String bud =RandomUserGenerator.generateBudget();
+//        textBudgetLeft.setText(RandomUserGenerator.generateBudget());
+        
+        
 
         // Setting Transactions
         clearTransactions();
@@ -223,6 +229,9 @@ public class MyController implements Initializable {
         monthButton.setStyle("");
         dayButton.setStyle("");
         yearButton.setStyle("");
+        
+        // updating money left in budget
+        
 
         // Setting Transactions
         clearTransactions();
@@ -244,6 +253,10 @@ public class MyController implements Initializable {
         dayButton.setStyle("");
         weekButton.setStyle("");
         yearButton.setStyle("");
+        
+        // updating money left in budget
+        
+        
 
         // Setting Transactions
         clearTransactions();
